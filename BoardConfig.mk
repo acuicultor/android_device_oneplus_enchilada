@@ -101,6 +101,7 @@ TW_EXCLUDE_MTP := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2025-12-31
+# oneplus 6 uses different version of spl please go to build/make/tools and find buildinfo.sh and place _orig after SECURITY_PATCH
 TW_INCLUDE_CRYPTO := true
 
 # Debug flags
