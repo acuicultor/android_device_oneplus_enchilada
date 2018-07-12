@@ -98,6 +98,8 @@ TW_NO_SCREEN_BLANK := true
 # to add vibration repopick 31021
 TW_USE_LEDS_HAPTICS := true
 TW_EXCLUDE_MTP := true
+# to remove twrp app repopick 27694
+TW_EXCLUDE_TWRPAPP := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2025-12-31
