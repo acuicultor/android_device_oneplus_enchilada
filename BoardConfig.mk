@@ -92,18 +92,14 @@ TW_MAX_BRIGHTNESS := 4095
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
-# MTP seems to cause a kernel panic, at least with some kernels, so disable it for now
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TW_NO_SCREEN_BLANK := true
-# to add vibration repopick 31021
 TW_USE_LEDS_HAPTICS := true
 TW_EXCLUDE_MTP := true
-# to remove twrp app repopick 27694
 TW_EXCLUDE_TWRPAPP := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2025-12-31
-# oneplus 6 uses different version of spl please go to build/make/tools and find buildinfo.sh and place _orig after SECURITY_PATCH
 TW_INCLUDE_CRYPTO := true
 
 # Debug flags
