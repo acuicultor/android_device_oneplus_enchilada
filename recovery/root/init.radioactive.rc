@@ -1,6 +1,6 @@
 # radioactive extras
 
- on property:sys.post_boot.parsed=1
+on property:sys.boot_completed=1
     # Tweak IO performance after boot complete
     write /sys/block/dm-0/queue/scheduler "cfq"
     write /sys/block/dm-1/queue/scheduler "cfq"
@@ -25,12 +25,14 @@
     # Input boost and stune configuration
     write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 902400
     write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 1056000
-    write /sys/module/cpu_input_boost/parameters/input_boost_duration 10
-	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 15
-     
+    write /sys/module/cpu_input_boost/parameters/input_boost_duration 40
+    write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5	
+
     # Disable scheduler core_ctl
     write /sys/devices/system/cpu/cpu0/core_ctl/enable 0
     write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
 
- 	write /dev/kmsg "Boot radioactive completed "
+    # OTG on by default
+	write /sys/class/power_supply/usb/otg_switch 1
 
+	write /dev/kmsg "Boot radioactive completed "
