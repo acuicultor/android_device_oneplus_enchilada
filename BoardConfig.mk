@@ -100,3 +100,6 @@ TW_INCLUDE_CRYPTO := true
 
 # Extras
 BOARD_SUPPRESS_SECURE_ERASE := true
+
+USE_RECOVERY_INSTALLER := true
+RECOVERY_INSTALLER_PATH := device/oneplus/enchilada/installer
