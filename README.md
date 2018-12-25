@@ -53,6 +53,8 @@ To make wipe system works you need of this commit: https://gerrit.omnirom.org/#/
 
 Now you need of this patch to make decryption working: https://gist.github.com/mauronofrio/af29bad34ad87a1a957d193794f0bf5f
 
+To auotomatic make the twrp installer, you need to import this commit in the build path: https://gerrit.omnirom.org/#/c/android_build/+/33182/
+
 
 To make all works you need to modify the buildinfo.sh in build/tools
 echo "ro.build.version.release=$PLATFORM_VERSION"
